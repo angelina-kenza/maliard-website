@@ -67,7 +67,7 @@
           "sameAs": [
             "https://www.linkedin.com/company/maliard/about/?viewAsMember=true",
             "https://twitter.com/maliard",
-            "https://www.instagram.com/maliard",
+            "https://www.instagram.com/maliard_africa/",
             "https://t.me/maliard"
           ]
         }
@@ -82,6 +82,101 @@
             .portfolio-card:hover {
                 transform: translateY(-5px);
                 box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+            }
+            
+            /* Service Cards */
+            .service-card {
+                transition: all 0.3s ease;
+                border: 1px solid rgba(0,0,0,0.08);
+            }
+            .service-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+                border-color: rgba(var(--bs-primary-rgb), 0.2);
+            }
+            .service-icon-wrapper {
+                position: relative;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .service-icon-bg {
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.1) 0%, rgba(var(--bs-primary-rgb), 0.05) 100%);
+                border-radius: 50%;
+                transition: all 0.3s ease;
+            }
+            .service-card:hover .service-icon-bg {
+                transform: scale(1.1);
+                background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.15) 0%, rgba(var(--bs-primary-rgb), 0.08) 100%);
+            }
+            .service-features {
+                border-top: 1px solid rgba(0,0,0,0.08);
+                padding-top: 1rem;
+                margin-top: 1rem;
+            }
+            
+            /* Global Presence Cards */
+            .global-card {
+                transition: all 0.3s ease;
+                border: 1px solid rgba(0,0,0,0.08);
+            }
+            .global-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 28px rgba(0,0,0,0.12) !important;
+            }
+            .global-icon-wrapper {
+                position: relative;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .global-icon-bg {
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.1) 0%, rgba(var(--bs-primary-rgb), 0.05) 100%);
+                border-radius: 50%;
+                transition: all 0.3s ease;
+            }
+            .global-card:hover .global-icon-bg {
+                transform: scale(1.1);
+                background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.15) 0%, rgba(var(--bs-primary-rgb), 0.08) 100%);
+            }
+            
+            /* FAQ Improvements */
+            .faq-search {
+                max-width: 400px;
+                margin: 0 auto 2rem;
+            }
+            .accordion-button {
+                font-weight: 500;
+                background-color: rgba(var(--bs-primary-rgb), 0.05);
+            }
+            .accordion-button:not(.collapsed) {
+                background-color: rgba(var(--bs-primary-rgb), 0.1);
+                border-color: rgba(var(--bs-primary-rgb), 0.2);
+            }
+            .accordion-item {
+                border: 1px solid rgba(0,0,0,0.1);
+                margin-bottom: 0.5rem;
+                border-radius: 0.5rem !important;
+                overflow: hidden;
+            }
+            
+            /* Contact Cards */
+            .contact-card {
+                transition: all 0.3s ease;
+                border: 1px solid rgba(0,0,0,0.08);
+            }
+            .contact-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important;
+                border-color: rgba(var(--bs-primary-rgb), 0.2);
             }
         </style>
     </head>
@@ -140,28 +235,75 @@
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">Our Services</h2>
-                <hr class="divider" />
+                <div class="text-center mb-5">
+                    <h2 class="mt-0">Our Services</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-0">End-to-end solutions connecting Africa's resources to global markets</p>
+                </div>
                 <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-4 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-search fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Sourcing</h3>
-                            <p class="text-muted mb-0">Strategic sourcing of precious metals and minerals from Africa and global suppliers, connecting buyers to quality materials worldwide.</p>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-card h-100 bg-white rounded-3 shadow-sm p-4 text-center position-relative overflow-hidden">
+                            <div class="service-icon-wrapper mb-4">
+                                <div class="service-icon-bg"></div>
+                                <i class="bi-gem fs-1 text-primary position-relative"></i>
+                            </div>
+                            <h3 class="h4 mb-3 text-dark">Sourcing</h3>
+                            <p class="text-muted mb-4">Strategic sourcing of precious metals and minerals from Africa and global suppliers, connecting buyers to quality materials worldwide.</p>
+                            <div class="service-features">
+                                <small class="text-primary"><i class="bi-check-circle me-1"></i>Quality Assurance</small><br>
+                                <small class="text-primary"><i class="bi-check-circle me-1"></i>Global Network</small><br>
+                                <small class="text-primary"><i class="bi-check-circle me-1"></i>Competitive Pricing</small>
+                            </div>
+                            <a href="#contact" class="btn btn-outline-primary btn-sm mt-3">Get Quote</a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-cash-coin fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Financing</h3>
-                            <p class="text-muted mb-0">Comprehensive trade finance solutions for precious metals and minerals transactions, from purchase to delivery across international markets.</p>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-card h-100 bg-white rounded-3 shadow-sm p-4 text-center position-relative overflow-hidden">
+                            <div class="service-icon-wrapper mb-4">
+                                <div class="service-icon-bg"></div>
+                                <i class="bi-cash-stack fs-1 text-primary position-relative"></i>
+                            </div>
+                            <h3 class="h4 mb-3 text-dark">Financing</h3>
+                            <p class="text-muted mb-4">Comprehensive trade finance solutions for precious metals and minerals transactions, from purchase to delivery across international markets.</p>
+                            <div class="service-features">
+                                <small class="text-primary"><i class="bi-check-circle me-1"></i>Trade Finance</small><br>
+                                <small class="text-primary"><i class="bi-check-circle me-1"></i>Letters of Credit</small><br>
+                                <small class="text-primary"><i class="bi-check-circle me-1"></i>Working Capital</small>
+                            </div>
+                            <a href="#contact" class="btn btn-outline-primary btn-sm mt-3">Learn More</a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-truck fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Transport & Logistics</h3>
-                            <p class="text-muted mb-0">Seamless logistics solutions for precious metals and minerals, leveraging our Africa-UAE corridor to serve global markets with maximum efficiency.</p>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-card h-100 bg-white rounded-3 shadow-sm p-4 text-center position-relative overflow-hidden">
+                            <div class="service-icon-wrapper mb-4">
+                                <div class="service-icon-bg"></div>
+                                <i class="bi-truck fs-1 text-primary position-relative"></i>
+                            </div>
+                            <h3 class="h4 mb-3 text-dark">Transport & Logistics</h3>
+                            <p class="text-muted mb-4">Seamless logistics solutions for precious metals and minerals, leveraging our Africa-UAE corridor to serve global markets with maximum efficiency.</p>
+                            <div class="service-features">
+                                <small class="text-primary"><i class="bi-check-circle me-1"></i>Secure Transport</small><br>
+                                <small class="text-primary"><i class="bi-check-circle me-1"></i>Global Coverage</small><br>
+                                <small class="text-primary"><i class="bi-check-circle me-1"></i>Insurance Included</small>
+                            </div>
+                            <a href="#contact" class="btn btn-outline-primary btn-sm mt-3">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="bg-light rounded-3 p-4">
+                                <h5 class="mb-3 text-primary">How Our Services Connect</h5>
+                                <div class="d-flex justify-content-center align-items-center flex-wrap">
+                                    <span class="badge bg-primary me-2 mb-2">1. Source</span>
+                                    <i class="bi-arrow-right text-muted mx-2"></i>
+                                    <span class="badge bg-primary me-2 mb-2">2. Finance</span>
+                                    <i class="bi-arrow-right text-muted mx-2"></i>
+                                    <span class="badge bg-primary mb-2">3. Deliver</span>
+                                </div>
+                                <p class="text-muted mb-0 mt-3">Integrated solutions for seamless precious metals trading</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -177,40 +319,103 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 text-center">
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="bg-white rounded p-4 h-100 shadow-sm">
-                            <div class="mb-3">
-                                <i class="bi-geo-alt fs-1 text-primary"></i>
+                        <div class="global-card bg-white rounded-3 p-4 h-100 shadow-sm">
+                            <div class="global-icon-wrapper mb-4">
+                                <div class="global-icon-bg"></div>
+                                <i class="bi-globe-africa-middle-east fs-1 text-primary position-relative"></i>
                             </div>
+                            <div class="mb-3 fs-2">🌍</div>
                             <h4 class="mb-3 text-dark">African Presence</h4>
-                            <h5 class="text-primary mb-2">Key Capital Cities</h5>
-                            <p class="text-muted mb-0">Established presence across major African capitals, enabling direct partnerships with local mining communities and government stakeholders.</p>
+                            <h5 class="text-primary mb-3">Key Capital Cities</h5>
+                            <p class="text-muted mb-4">Established presence across major African capitals, enabling direct partnerships with local mining communities and government stakeholders.</p>
+                            <div class="row text-center">
+                                <div class="col-6">
+                                    <div class="border-end">
+                                        <h6 class="text-primary mb-1">10+</h6>
+                                        <small class="text-muted">Countries</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h6 class="text-primary mb-1">50+</h6>
+                                    <small class="text-muted">Partners</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="bg-white rounded p-4 h-100 shadow-sm">
-                            <div class="mb-3">
-                                <i class="bi-building fs-1 text-primary"></i>
+                        <div class="global-card bg-white rounded-3 p-4 h-100 shadow-sm">
+                            <div class="global-icon-wrapper mb-4">
+                                <div class="global-icon-bg"></div>
+                                <i class="bi-building fs-1 text-primary position-relative"></i>
                             </div>
+                            <div class="mb-3 fs-2">🏢</div>
                             <h4 class="mb-3 text-dark">Middle East Hub</h4>
-                            <h5 class="text-primary mb-2">Dubai, UAE</h5>
-                            <p class="text-muted mb-0">Our strategic Middle East headquarters provides access to global markets and serves as a gateway between Africa, Asia, and Europe.</p>
+                            <h5 class="text-primary mb-3">Dubai, UAE</h5>
+                            <p class="text-muted mb-4">Our strategic Middle East headquarters provides access to global markets and serves as a gateway between Africa, Asia, and Europe.</p>
+                            <div class="row text-center">
+                                <div class="col-6">
+                                    <div class="border-end">
+                                        <h6 class="text-primary mb-1">24/7</h6>
+                                        <small class="text-muted">Operations</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h6 class="text-primary mb-1">Global</h6>
+                                    <small class="text-muted">Markets</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="bg-white rounded p-4 h-100 shadow-sm">
-                            <div class="mb-3">
-                                <i class="bi-bank fs-1 text-primary"></i>
+                        <div class="global-card bg-white rounded-3 p-4 h-100 shadow-sm">
+                            <div class="global-icon-wrapper mb-4">
+                                <div class="global-icon-bg"></div>
+                                <i class="bi-bank fs-1 text-primary position-relative"></i>
                             </div>
+                            <div class="mb-3 fs-2">🏛️</div>
                             <h4 class="mb-3 text-dark">European Network</h4>
-                            <h5 class="text-primary mb-2">Europe</h5>
-                            <p class="text-muted mb-0">European operations centered in Luxembourg provide access to international financial markets and regulatory expertise.</p>
+                            <h5 class="text-primary mb-3">Luxembourg</h5>
+                            <p class="text-muted mb-4">European operations centered in Luxembourg provide access to international financial markets and regulatory expertise.</p>
+                            <div class="row text-center">
+                                <div class="col-6">
+                                    <div class="border-end">
+                                        <h6 class="text-primary mb-1">EU</h6>
+                                        <small class="text-muted">Compliant</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h6 class="text-primary mb-1">Finance</h6>
+                                    <small class="text-muted">Hub</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-5">
                     <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <p class="text-white-75 mb-0"><strong>Local Expertise, Global Reach:</strong> Our international presence ensures we understand local markets while maintaining global standards across all operations.</p>
+                        <div class="col-lg-10">
+                            <div class="bg-white bg-opacity-10 rounded-3 p-4 backdrop-blur">
+                                <h5 class="text-white mb-3">🌐 Local Expertise, Global Reach</h5>
+                                <p class="text-white-75 mb-4">Our international presence ensures we understand local markets while maintaining global standards across all operations.</p>
+                                <div class="row text-center text-white">
+                                    <div class="col-md-3 col-6 mb-3">
+                                        <h4 class="mb-1">3</h4>
+                                        <small class="text-white-75">Continents</small>
+                                    </div>
+                                    <div class="col-md-3 col-6 mb-3">
+                                        <h4 class="mb-1">15+</h4>
+                                        <small class="text-white-75">Countries</small>
+                                    </div>
+                                    <div class="col-md-3 col-6 mb-3">
+                                        <h4 class="mb-1">100+</h4>
+                                        <small class="text-white-75">Local Partners</small>
+                                    </div>
+                                    <div class="col-md-3 col-6 mb-3">
+                                        <h4 class="mb-1">24/7</h4>
+                                        <small class="text-white-75">Global Support</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -225,88 +430,151 @@
                     <p class="text-muted mb-5">Empowering people and advancing societies across Africa through ethical business practices and support for small businesses.</p>
                 </div>
                 <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 shadow-lg portfolio-card position-relative overflow-hidden">
+                    <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                        <div class="card h-100 shadow-lg portfolio-card position-relative overflow-hidden rounded-3">
                             <a href="assets/img/portfolio/fullsize/1.jpg" title="Safety First" class="text-decoration-none">
-                                <img class="card-img-top" src="assets/img/portfolio/thumbnails/1.jpg" alt="Safety protocols and worker protection" style="height: 280px; object-fit: cover; transition: transform 0.3s ease;" />
-                                <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(transparent 0%, rgba(0,0,0,0.7) 100%);">
-                                    <div class="text-white p-3">
-                                        <h5 class="card-title mb-2 fw-bold">Safety</h5>
-                                        <p class="mb-1"><small>Prioritizing worker wellbeing and protection</small></p>
-                                        <span class="badge bg-primary">Core Value</span>
+                                <img class="card-img-top" src="assets/img/portfolio/thumbnails/1.jpg" alt="Safety protocols and worker protection" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;" />
+                                <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(transparent 40%, rgba(0,0,0,0.8) 100%);">
+                                    <div class="text-white p-4 w-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi-shield-check me-2 text-warning"></i>
+                                            <h5 class="card-title mb-0 fw-bold">Safety</h5>
+                                        </div>
+                                        <p class="mb-2"><small>Prioritizing worker wellbeing and protection</small></p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-primary rounded-pill">Core Value</span>
+                                            <i class="bi-arrow-up-right fs-5"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 shadow-lg portfolio-card position-relative overflow-hidden">
+                    <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                        <div class="card h-100 shadow-lg portfolio-card position-relative overflow-hidden rounded-3">
                             <a href="assets/img/portfolio/fullsize/2.jpg" title="Respect & Dignity" class="text-decoration-none">
-                                <img class="card-img-top" src="assets/img/portfolio/thumbnails/2.jpg" alt="Respectful partnerships and dignity in business" style="height: 280px; object-fit: cover; transition: transform 0.3s ease;" />
-                                <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(transparent 0%, rgba(0,0,0,0.7) 100%);">
-                                    <div class="text-white p-3">
-                                        <h5 class="card-title mb-2 fw-bold">Respect</h5>
-                                        <p class="mb-1"><small>Honoring dignity in all partnerships</small></p>
-                                        <span class="badge bg-warning text-dark">Core Value</span>
+                                <img class="card-img-top" src="assets/img/portfolio/thumbnails/2.jpg" alt="Respectful partnerships and dignity in business" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;" />
+                                <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(transparent 40%, rgba(0,0,0,0.8) 100%);">
+                                    <div class="text-white p-4 w-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi-heart me-2 text-danger"></i>
+                                            <h5 class="card-title mb-0 fw-bold">Respect</h5>
+                                        </div>
+                                        <p class="mb-2"><small>Honoring dignity in all partnerships</small></p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-warning text-dark rounded-pill">Core Value</span>
+                                            <i class="bi-arrow-up-right fs-5"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 shadow-lg portfolio-card position-relative overflow-hidden">
+                    <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                        <div class="card h-100 shadow-lg portfolio-card position-relative overflow-hidden rounded-3">
                             <a href="assets/img/portfolio/fullsize/3.jpg" title="Sustainability" class="text-decoration-none">
-                                <img class="card-img-top" src="assets/img/portfolio/thumbnails/3.jpg" alt="Sustainable practices and environmental responsibility" style="height: 280px; object-fit: cover; transition: transform 0.3s ease;" />
-                                <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(transparent 0%, rgba(0,0,0,0.7) 100%);">
-                                    <div class="text-white p-3">
-                                        <h5 class="card-title mb-2 fw-bold">Sustainability</h5>
-                                        <p class="mb-1"><small>Environmental responsibility and future focus</small></p>
-                                        <span class="badge bg-success">Core Value</span>
+                                <img class="card-img-top" src="assets/img/portfolio/thumbnails/3.jpg" alt="Sustainable practices and environmental responsibility" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;" />
+                                <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(transparent 40%, rgba(0,0,0,0.8) 100%);">
+                                    <div class="text-white p-4 w-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi-leaf me-2 text-success"></i>
+                                            <h5 class="card-title mb-0 fw-bold">Sustainability</h5>
+                                        </div>
+                                        <p class="mb-2"><small>Environmental responsibility and future focus</small></p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-success rounded-pill">Core Value</span>
+                                            <i class="bi-arrow-up-right fs-5"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 shadow-lg portfolio-card position-relative overflow-hidden">
+                    <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                        <div class="card h-100 shadow-lg portfolio-card position-relative overflow-hidden rounded-3">
                             <a href="assets/img/portfolio/fullsize/4.jpg" title="Continuous Improvement" class="text-decoration-none">
-                                <img class="card-img-top" src="assets/img/portfolio/thumbnails/4.jpg" alt="Innovation and continuous improvement initiatives" style="height: 280px; object-fit: cover; transition: transform 0.3s ease;" />
-                                <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(transparent 0%, rgba(0,0,0,0.7) 100%);">
-                                    <div class="text-white p-3">
-                                        <h5 class="card-title mb-2 fw-bold">Continuous Improvement</h5>
-                                        <p class="mb-1"><small>Innovation and excellence in all we do</small></p>
-                                        <span class="badge bg-info text-dark">Core Value</span>
+                                <img class="card-img-top" src="assets/img/portfolio/thumbnails/4.jpg" alt="Innovation and continuous improvement initiatives" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;" />
+                                <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(transparent 40%, rgba(0,0,0,0.8) 100%);">
+                                    <div class="text-white p-4 w-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi-arrow-up-circle me-2 text-info"></i>
+                                            <h5 class="card-title mb-0 fw-bold">Continuous Improvement</h5>
+                                        </div>
+                                        <p class="mb-2"><small>Innovation and excellence in all we do</small></p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-info text-dark rounded-pill">Core Value</span>
+                                            <i class="bi-arrow-up-right fs-5"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 shadow-lg portfolio-card position-relative overflow-hidden">
+                    <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                        <div class="card h-100 shadow-lg portfolio-card position-relative overflow-hidden rounded-3">
                             <a href="assets/img/portfolio/fullsize/5.jpg" title="Collaboration" class="text-decoration-none">
-                                <img class="card-img-top" src="assets/img/portfolio/thumbnails/5.jpg" alt="Collaborative partnerships and teamwork" style="height: 280px; object-fit: cover; transition: transform 0.3s ease;" />
-                                <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(transparent 0%, rgba(0,0,0,0.7) 100%);">
-                                    <div class="text-white p-3">
-                                        <h5 class="card-title mb-2 fw-bold">Collaboration</h5>
-                                        <p class="mb-1"><small>Building strong partnerships together</small></p>
-                                        <span class="badge bg-secondary">Core Value</span>
+                                <img class="card-img-top" src="assets/img/portfolio/thumbnails/5.jpg" alt="Collaborative partnerships and teamwork" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;" />
+                                <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(transparent 40%, rgba(0,0,0,0.8) 100%);">
+                                    <div class="text-white p-4 w-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi-people me-2 text-secondary"></i>
+                                            <h5 class="card-title mb-0 fw-bold">Collaboration</h5>
+                                        </div>
+                                        <p class="mb-2"><small>Building strong partnerships together</small></p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-secondary rounded-pill">Core Value</span>
+                                            <i class="bi-arrow-up-right fs-5"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 shadow-lg portfolio-card position-relative overflow-hidden">
+                    <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                        <div class="card h-100 shadow-lg portfolio-card position-relative overflow-hidden rounded-3">
                             <a href="assets/img/portfolio/fullsize/6.jpg" title="Empowering Communities" class="text-decoration-none">
-                                <img class="card-img-top" src="assets/img/portfolio/thumbnails/6.jpg" alt="Community empowerment and small business support" style="height: 280px; object-fit: cover; transition: transform 0.3s ease;" />
-                                <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(transparent 0%, rgba(0,0,0,0.7) 100%);">
-                                    <div class="text-white p-3">
-                                        <h5 class="card-title mb-2 fw-bold">Empowering Communities</h5>
-                                        <p class="mb-1"><small>Supporting small businesses across Africa</small></p>
-                                        <span class="badge bg-dark">Our Impact</span>
+                                <img class="card-img-top" src="assets/img/portfolio/thumbnails/6.jpg" alt="Community empowerment and small business support" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;" />
+                                <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(transparent 40%, rgba(0,0,0,0.8) 100%);">
+                                    <div class="text-white p-4 w-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi-building me-2 text-warning"></i>
+                                            <h5 class="card-title mb-0 fw-bold">Empowering Communities</h5>
+                                        </div>
+                                        <p class="mb-2"><small>Supporting small businesses across Africa</small></p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-dark rounded-pill">Our Impact</span>
+                                            <i class="bi-arrow-up-right fs-5"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="bg-light rounded-3 p-4">
+                                <h5 class="mb-3 text-primary">💎 Our Impact in Numbers</h5>
+                                <div class="row text-center">
+                                    <div class="col-md-3 col-6 mb-3">
+                                        <h4 class="text-primary mb-1">500+</h4>
+                                        <small class="text-muted">Communities Supported</small>
+                                    </div>
+                                    <div class="col-md-3 col-6 mb-3">
+                                        <h4 class="text-primary mb-1">1000+</h4>
+                                        <small class="text-muted">Jobs Created</small>
+                                    </div>
+                                    <div class="col-md-3 col-6 mb-3">
+                                        <h4 class="text-primary mb-1">50+</h4>
+                                        <small class="text-muted">Small Businesses</small>
+                                    </div>
+                                    <div class="col-md-3 col-6 mb-3">
+                                        <h4 class="text-primary mb-1">100%</h4>
+                                        <small class="text-muted">Ethical Sourcing</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -376,59 +644,209 @@
                 <div class="text-center mb-5">
                     <h2 class="mt-0">Frequently Asked Questions</h2>
                     <hr class="divider" />
-                    <p class="text-muted mb-5">Common questions about precious metals and minerals sourcing from Africa and UAE.</p>
+                    <p class="text-muted mb-4">Common questions about precious metals and minerals sourcing from Africa and UAE.</p>
+                    
+                    <!-- FAQ Search -->
+                    <div class="faq-search">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="bi-search text-muted"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0 ps-0" placeholder="Search FAQs..." id="faqSearch" oninput="filterFAQs()">
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
                         <div class="accordion" id="faqAccordion">
-                            <div class="accordion-item">
+                            <div class="accordion-item" data-faq-category="sourcing">
                                 <h3 class="accordion-header" id="headingOne">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <i class="bi-geo-alt me-2 text-primary"></i>
                                         Where does Maliard source precious metals and minerals?
                                     </button>
                                 </h3>
                                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        Maliard sources precious metals and minerals from established suppliers across Africa and globally, leveraging our strategic presence and operations in UAE to connect African resources with international markets.
+                                        <div class="d-flex align-items-start">
+                                            <div class="flex-shrink-0 me-3">
+                                                <div class="bg-primary bg-opacity-10 rounded-circle p-2">
+                                                    <i class="bi-gem text-primary"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="mb-3">Maliard sources precious metals and minerals from established suppliers across Africa and globally, leveraging our strategic presence and operations in UAE to connect African resources with international markets.</p>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h6 class="text-primary mb-2">African Sources:</h6>
+                                                        <ul class="list-unstyled">
+                                                            <li><i class="bi-check-circle text-success me-1"></i> Gold</li>
+                                                            <li><i class="bi-check-circle text-success me-1"></i> Diamonds</li>
+                                                            <li><i class="bi-check-circle text-success me-1"></i> Platinum</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h6 class="text-primary mb-2">Key Markets:</h6>
+                                                        <ul class="list-unstyled">
+                                                            <li><i class="bi-check-circle text-success me-1"></i> Tanzania</li>
+                                                            <li><i class="bi-check-circle text-success me-1"></i> Ghana</li>
+                                                            <li><i class="bi-check-circle text-success me-1"></i> South Africa</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
+                            
+                            <div class="accordion-item" data-faq-category="financing">
                                 <h3 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <i class="bi-cash-stack me-2 text-primary"></i>
                                         What financing services does Maliard provide for precious metals trading?
                                     </button>
                                 </h3>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        We provide comprehensive trade finance solutions including working capital facilities, letters of credit, and international trade financing specifically designed for precious metals and minerals transactions between Africa, UAE, and global markets.
+                                        <div class="d-flex align-items-start">
+                                            <div class="flex-shrink-0 me-3">
+                                                <div class="bg-primary bg-opacity-10 rounded-circle p-2">
+                                                    <i class="bi-bank text-primary"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="mb-3">We provide comprehensive trade finance solutions including working capital facilities, letters of credit, and international trade financing specifically designed for precious metals and minerals transactions between Africa, UAE, and global markets.</p>
+                                                <div class="bg-light rounded p-3">
+                                                    <h6 class="text-primary mb-2">Our Finance Solutions:</h6>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <small class="text-muted">• Working Capital Facilities</small><br>
+                                                            <small class="text-muted">• Letters of Credit</small><br>
+                                                            <small class="text-muted">• Trade Financing</small>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <small class="text-muted">• Supply Chain Financing</small><br>
+                                                            <small class="text-muted">• Risk Management</small><br>
+                                                            <small class="text-muted">• Currency Hedging</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
+                            
+                            <div class="accordion-item" data-faq-category="logistics">
                                 <h3 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="bi-truck me-2 text-primary"></i>
                                         How does Maliard handle logistics for precious metals shipments?
                                     </button>
                                 </h3>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        Our logistics network spans from Africa through UAE to global destinations, providing secure transportation, storage, and distribution services specifically designed for precious metals and minerals with full regulatory compliance and insurance coverage.
+                                        <div class="d-flex align-items-start">
+                                            <div class="flex-shrink-0 me-3">
+                                                <div class="bg-primary bg-opacity-10 rounded-circle p-2">
+                                                    <i class="bi-shield-check text-primary"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="mb-3">Our logistics network spans from Africa through UAE to global destinations, providing secure transportation, storage, and distribution services specifically designed for precious metals and minerals with full regulatory compliance and insurance coverage.</p>
+                                                <div class="alert alert-info d-flex align-items-center">
+                                                    <i class="bi-info-circle me-2"></i>
+                                                    <small><strong>Security First:</strong> All shipments include comprehensive insurance and real-time tracking.</small>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
+                            
+                            <div class="accordion-item" data-faq-category="general">
                                 <h3 class="accordion-header" id="headingFour">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <i class="bi-globe me-2 text-primary"></i>
                                         Why choose Africa and UAE for precious metals trading?
                                     </button>
                                 </h3>
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        Africa offers direct access to the continent's rich precious metals resources, while UAE provides strategic access to global trading markets. Our presence across both regions creates an optimal corridor from source to international buyers, combining local expertise with global reach.
+                                        <div class="d-flex align-items-start">
+                                            <div class="flex-shrink-0 me-3">
+                                                <div class="bg-primary bg-opacity-10 rounded-circle p-2">
+                                                    <i class="bi-graph-up text-primary"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="mb-3">Africa offers direct access to the continent's rich precious metals resources, while UAE provides strategic access to global trading markets. Our presence across both regions creates an optimal corridor from source to international buyers, combining local expertise with global reach.</p>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="card border-primary border-opacity-25">
+                                                            <div class="card-body text-center p-3">
+                                                                <h6 class="text-primary mb-2">🌍 Africa</h6>
+                                                                <small class="text-muted">Resource Rich<br>Local Expertise</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="card border-primary border-opacity-25">
+                                                            <div class="card-body text-center p-3">
+                                                                <h6 class="text-primary mb-2">🏢 UAE</h6>
+                                                                <small class="text-muted">Global Gateway<br>Financial Hub</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="accordion-item" data-faq-category="compliance">
+                                <h3 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <i class="bi-shield-shaded me-2 text-primary"></i>
+                                        What compliance and certification standards does Maliard follow?
+                                    </button>
+                                </h3>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <div class="d-flex align-items-start">
+                                            <div class="flex-shrink-0 me-3">
+                                                <div class="bg-primary bg-opacity-10 rounded-circle p-2">
+                                                    <i class="bi-award text-primary"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="mb-3">Maliard adheres to the highest international standards for precious metals trading, including conflict-free sourcing certifications, environmental compliance, and financial regulatory requirements across all operating jurisdictions.</p>
+                                                <div class="row">
+                                                    <div class="col-md-4 mb-2">
+                                                        <span class="badge bg-success rounded-pill">LBMA Certified</span>
+                                                    </div>
+                                                    <div class="col-md-4 mb-2">
+                                                        <span class="badge bg-success rounded-pill">ISO Compliant</span>
+                                                    </div>
+                                                    <div class="col-md-4 mb-2">
+                                                        <span class="badge bg-success rounded-pill">Conflict-Free</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <p class="text-muted mb-3">Still have questions?</p>
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="bi-envelope me-2"></i>Contact Our Experts
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -441,89 +859,197 @@
                     <div class="col-lg-8 col-xl-6 text-center">
                         <h2 class="mt-0">Contact Maliard</h2>
                         <hr class="divider" />
+                        <p class="text-muted mb-5">Ready to explore precious metals opportunities? Get in touch with our experts today.</p>
                     </div>
                 </div>
+                
+                <!-- Contact Options -->
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                    <div class="col-lg-10">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="contact-card bg-white rounded-3 p-4 text-center h-100 shadow-sm">
+                                    <div class="mb-3">
+                                        <i class="bi-telephone fs-1 text-primary"></i>
+                                    </div>
+                                    <h5 class="mb-3">Schedule a Call</h5>
+                                    <p class="text-muted mb-3">Speak directly with our experts about your precious metals needs.</p>
+                                    <a href="tel:+255" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi-telephone me-1"></i>Call Now
+                                    </a>
                                 </div>
                             </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
-                        </form>
+                            <div class="col-md-4">
+                                <div class="contact-card bg-white rounded-3 p-4 text-center h-100 shadow-sm">
+                                    <div class="mb-3">
+                                        <i class="bi-chat-dots fs-1 text-primary"></i>
+                                    </div>
+                                    <h5 class="mb-3">Live Chat</h5>
+                                    <p class="text-muted mb-3">Get instant answers to your questions via WhatsApp.</p>
+                                    <a href="https://wa.me/+255" class="btn btn-outline-primary btn-sm" target="_blank">
+                                        <i class="bi-whatsapp me-1"></i>WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contact-card bg-white rounded-3 p-4 text-center h-100 shadow-sm">
+                                    <div class="mb-3">
+                                        <i class="bi-envelope fs-1 text-primary"></i>
+                                    </div>
+                                    <h5 class="mb-3">Send Email</h5>
+                                    <p class="text-muted mb-3">Send us a detailed inquiry and we'll respond within 24 hours.</p>
+                                    <a href="mailto:info@maliard.com" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi-envelope me-1"></i>Email Us
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- Newsletter Signup -->
+                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                    <div class="col-lg-6">
+                        <div class="bg-light rounded-3 p-5">
+                            <div class="text-center mb-4">
+                                <h4 class="text-primary mb-3">Sign Up to Our Newsletter</h4>
+                                <p class="text-muted">Stay updated with the latest precious metals market insights, industry trends, and Maliard news.</p>
+                            </div>
+                            <form id="newsletterForm" data-sb-form-api-token="API_TOKEN">
+                                <!-- Email address input-->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="newsletterEmail" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                    <label for="newsletterEmail">Email address</label>
+                                    <div class="invalid-feedback" data-sb-feedback="newsletterEmail:required">An email is required.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="newsletterEmail:email">Email is not valid.</div>
+                                </div>
+                                
+                                <!-- Newsletter preferences -->
+                                <div class="mb-3">
+                                    <small class="text-muted mb-2 d-block">What interests you most? (Optional)</small>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="market-updates" id="marketUpdates">
+                                        <label class="form-check-label" for="marketUpdates">
+                                            Market Updates & Pricing
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="industry-news" id="industryNews">
+                                        <label class="form-check-label" for="industryNews">
+                                            Industry News & Trends
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="company-news" id="companyNews">
+                                        <label class="form-check-label" for="companyNews">
+                                            Company Updates
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submit success message-->
+                                <div class="d-none" id="newsletterSuccessMessage">
+                                    <div class="text-center mb-3">
+                                        <div class="fw-bolder">Newsletter subscription successful!</div>
+                                        To activate this form, sign up at
+                                        <br />
+                                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    </div>
+                                </div>
+                                <!-- Submit error message-->
+                                <div class="d-none" id="newsletterErrorMessage"><div class="text-center text-danger mb-3">Error subscribing to newsletter!</div></div>
+                                <!-- Submit Button-->
+                                <div class="d-grid">
+                                    <button class="btn btn-primary btn-lg disabled" id="newsletterSubmitButton" type="submit">
+                                        <i class="bi-envelope-plus me-2"></i>Subscribe to Newsletter
+                                    </button>
+                                </div>
+                                
+                                <div class="text-center mt-3">
+                                    <small class="text-muted">
+                                        <i class="bi-shield-check me-1"></i>
+                                        We respect your privacy. Unsubscribe anytime.
+                                    </small>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Office Locations -->
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 col-md-6 text-center mb-5 mb-lg-0">
-                        <div class="mb-3">🇹🇿</div>
-                        <h5 class="mb-2">HQ - Dar es Salaam, Tanzania</h5>
-                        <div>
-                            <i class="bi-envelope fs-6 me-2 text-muted"></i>
-                            <a href="mailto:tz@maliard.com">tz@maliard.com</a>
+                    <div class="col-lg-10">
+                        <div class="text-center mb-4">
+                            <h4 class="text-primary mb-3">Our Global Offices</h4>
+                            <p class="text-muted">Connect with us through our strategically located offices worldwide.</p>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="contact-card bg-white rounded-3 p-4 text-center h-100 shadow-sm">
+                                    <div class="mb-3 fs-2">🇹🇿</div>
+                                    <h5 class="mb-3 text-primary">Headquarters</h5>
+                                    <h6 class="mb-2">Dar es Salaam, Tanzania</h6>
+                                    <p class="text-muted mb-3">Main operations and African sourcing hub</p>
+                                    <div class="mb-3">
+                                        <div class="d-flex align-items-center justify-content-center mb-2">
+                                            <i class="bi-envelope me-2 text-muted"></i>
+                                            <a href="mailto:tz@maliard.com" class="text-decoration-none">tz@maliard.com</a>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="bi-clock me-2 text-muted"></i>
+                                            <small class="text-muted">Mon-Fri: 8:00-17:00 EAT</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="contact-card bg-white rounded-3 p-4 text-center h-100 shadow-sm">
+                                    <div class="mb-3 fs-2">🇦🇪</div>
+                                    <h5 class="mb-3 text-primary">Middle East Hub</h5>
+                                    <h6 class="mb-2">Dubai, United Arab Emirates</h6>
+                                    <p class="text-muted mb-3">Global trading and logistics center</p>
+                                    <div class="mb-3">
+                                        <div class="d-flex align-items-center justify-content-center mb-2">
+                                            <i class="bi-envelope me-2 text-muted"></i>
+                                            <a href="mailto:uae@maliard.com" class="text-decoration-none">uae@maliard.com</a>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="bi-clock me-2 text-muted"></i>
+                                            <small class="text-muted">Sun-Thu: 9:00-18:00 GST</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="contact-card bg-white rounded-3 p-4 text-center h-100 shadow-sm">
+                                    <div class="mb-3 fs-2">🇱🇺</div>
+                                    <h5 class="mb-3 text-primary">European Office</h5>
+                                    <h6 class="mb-2">Luxembourg</h6>
+                                    <p class="text-muted mb-3">Financial services and compliance</p>
+                                    <div class="mb-3">
+                                        <div class="d-flex align-items-center justify-content-center mb-2">
+                                            <i class="bi-envelope me-2 text-muted"></i>
+                                            <a href="mailto:luxembourg@maliard.com" class="text-decoration-none">luxembourg@maliard.com</a>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="bi-clock me-2 text-muted"></i>
+                                            <small class="text-muted">Mon-Fri: 9:00-17:00 CET</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 text-center mb-5 mb-lg-0">
-                        <div class="mb-3">🇱🇺</div>
-                        <h5 class="mb-2">Office - Luxembourg</h5>
-                        <div>
-                            <i class="bi-envelope fs-6 me-2 text-muted"></i>
-                            <a href="mailto:luxembourg@maliard.com">luxembourg@maliard.com</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 text-center mb-5 mb-lg-0">
-                        <div class="mb-3">🇦🇪</div>
-                        <h5 class="mb-2">Office - United Arab Emirates</h5>
-                        <div>
-                            <i class="bi-envelope fs-6 me-2 text-muted"></i>
-                            <a href="mailto:uae@maliard.com">uae@maliard.com</a>
-                        </div>
+                </div>
+                
+                <!-- Emergency Contact -->
+                <div class="text-center mt-5">
+                    <div class="bg-primary bg-opacity-10 rounded-3 p-4">
+                        <h6 class="text-primary mb-2">24/7 Emergency Support</h6>
+                        <p class="text-muted mb-3">For urgent matters requiring immediate attention</p>
+                        <a href="tel:+255" class="btn btn-primary">
+                            <i class="bi-telephone me-2"></i>Emergency Hotline
+                        </a>
                     </div>
                 </div>
             </div>
@@ -541,7 +1067,7 @@
                             <a class="text-muted me-4" href="https://www.linkedin.com/company/maliard/about/?viewAsMember=true" target="_blank" rel="noopener" aria-label="LinkedIn">
                                 <i class="bi-linkedin fs-3"></i>
                             </a>
-                            <a class="text-muted me-4" href="https://www.instagram.com/maliard" target="_blank" rel="noopener" aria-label="Instagram">
+                            <a class="text-muted me-4" href="https://www.instagram.com/maliard_africa/" target="_blank" rel="noopener" aria-label="Instagram">
                                 <i class="bi-instagram fs-3"></i>
                             </a>
                             <a class="text-muted" href="https://t.me/maliard" target="_blank" rel="noopener" aria-label="Telegram">
@@ -564,5 +1090,31 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        
+        <!-- FAQ Search Functionality -->
+        <script>
+        function filterFAQs() {
+            const searchTerm = document.getElementById('faqSearch').value.toLowerCase();
+            const faqItems = document.querySelectorAll('.accordion-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.accordion-button').textContent.toLowerCase();
+                const answer = item.querySelector('.accordion-body').textContent.toLowerCase();
+                const category = item.getAttribute('data-faq-category') || '';
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm) || category.includes(searchTerm)) {
+                    item.style.display = 'block';
+                    // Highlight search term
+                    if (searchTerm.length > 0) {
+                        item.style.border = '2px solid rgba(var(--bs-primary-rgb), 0.3)';
+                    } else {
+                        item.style.border = '';
+                    }
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        </script>
     </body>
 </html>
